@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --bg-primary: #0a0e17;
+  --bg-secondary: #0d121f;
+  --bg-card: #22273a;
+  --text-primary: #ffffff;
+  --accent: #8a57de;
+  --gradient-start: #ff6b8b;
+  --gradient-middle: #a873ff;
+  --gradient-end: #56ccf2;
+  --success: #4ade80;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Raleway', sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  overflow-x: hidden;
+  font-size: 15px; /* Reduced base font size */
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+/* Base styles for all sections */
+section {
+  padding: 80px 0; /* Reduced padding */
+  min-height: 90vh; /* Reduced height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Alternating background colors */
+/* Use ID selectors to increase specificity for non-home sections */
+#about, 
+#skills, 
+#education, 
+#experience, 
+#projects, 
+#contact {
+  background-color: var(--bg-primary);
+}
+
+#skills,
+#experience {
+  background-color: var(--bg-secondary);
+}
+
+/* Home section gets no background color from globals.css */
+/* This allows Home.css to control its background completely */
+
+.container {
+  max-width: 1100px; /* Slightly reduced max-width */
+  margin: 0 auto;
+  padding: 0 15px; /* Reduced side padding */
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 40px; /* Reduced margin */
+}
+
+.section-title h2 {
+  display: inline-block;
+  font-size: 2.2rem; /* Reduced font size */
+  margin-bottom: 12px; /* Reduced margin */
+  position: relative;
+  background: linear-gradient(to right, var(--gradient-start), var(--gradient-middle), var(--gradient-end));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+  
+.section-title h2::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -8px; /* Reduced distance */
+  transform: translateX(-50%);
+  width: 60px; /* Reduced width */
+  height: 3px;
+  background: linear-gradient(to right, var(--gradient-start), var(--gradient-middle), var(--gradient-end));
+}
+
+.card {
+  background-color: var(--bg-card);
+  border-radius: 8px; /* Reduced radius */
+  padding: 25px; /* Reduced padding */
+  margin-bottom: 25px; /* Reduced margin */
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 25px; /* Reduced padding */
+  background: linear-gradient(to right, var(--gradient-start), var(--gradient-middle));
+  border: none;
+  border-radius: 25px; /* Reduced radius */
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 0.9rem; /* Reduced font size */
+}
+
+.btn:hover {
+  background: linear-gradient(to right, var(--gradient-middle), var(--gradient-end));
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}

@@ -1,0 +1,126 @@
+.footer {
+  background-color: var(--bg-card);
+  padding: 12px 0 8px;
+  position: relative;
+}
+  
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+  
+.footer-logo {
+  margin-bottom: 8px;
+}
+  
+.footer-logo a {
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--text-primary);
+}
+
+/* Add spacing between Purvasha and Vijay */
+.footer-logo a span {
+  margin-left: 6px; /* Add space before Vijay */
+  background: linear-gradient(to right, var(--gradient-start), var(--gradient-middle));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Hide social icons */
+.footer-social {
+  display: none;
+}
+  
+.footer-nav {
+  margin-bottom: 8px;
+}
+  
+.footer-nav ul {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  gap: 8px;
+}
+  
+.footer-nav li {
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+/* Add vertical line separators between nav items */
+.footer-nav li:not(:last-child)::after {
+  content: '|';
+  margin-left: 8px;
+  color: rgba(255, 255, 255, 0.3);
+  font-size: 0.7rem;
+}
+  
+.footer-nav a {
+  color: var(--text-primary);
+  text-decoration: none;
+  font-size: 0.75rem;
+  transition: all 0.3s ease;
+}
+  
+.footer-nav a:hover {
+  color: var(--accent);
+}
+  
+.footer-copy {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.75rem;
+}
+  
+/* Hide the second paragraph (specialist line) */
+.footer-copy p:nth-child(2) {
+  display: none;
+}
+
+.footer-copy p {
+  margin: 0;
+}
+  
+.back-to-top {
+  position: absolute;
+  top: -18px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+  
+.back-to-top a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background: linear-gradient(to bottom right, var(--gradient-start), var(--gradient-middle));
+  color: white;
+  border-radius: 50%;
+  text-decoration: none;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+  
+@media (max-width: 576px) {
+  .footer-nav ul {
+    gap: 5px;
+  }
+  
+  .footer-nav li:not(:last-child)::after {
+    margin-left: 5px;
+  }
+    
+  .footer-logo a {
+    font-size: 1.3rem;
+  }
+}

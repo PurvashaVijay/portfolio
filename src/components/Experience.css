@@ -1,0 +1,231 @@
+.experience {
+  background-color: #0f1117;
+  padding: 60px 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Title Styles */
+.title-container {
+  text-align: center;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+/* Main Title */
+.main-title {
+  font-size: 2rem;
+  margin-bottom: 5px;
+  background: linear-gradient(to right, var(--gradient-start), var(--gradient-middle), var(--gradient-end));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+/* Title Underline */
+.main-title::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(to right, #ff6b8b, #a873ff, #3cc8ff);
+  margin: 8px auto 10px;
+  border-radius: 2px;
+}
+
+/* Subtitle */
+.subtitle {
+  font-size: 1.1rem;
+  color: #fff;
+  margin-bottom: 12px;
+  font-weight: 400;
+}
+
+/* Timeline */
+.timeline {
+  position: relative;
+  margin: 40px 0;
+}
+
+.timeline-line {
+  position: absolute;
+  width: 4px;
+  background-color: #ff6b98;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+/* Timeline entry with card and dot */
+.timeline-entry {
+  position: relative;
+  margin-bottom: 40px;
+}
+
+/* Timeline row for side-by-side items */
+.timeline-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.timeline-row .timeline-item {
+  width: 47%;
+  position: relative;
+}
+
+/* Regular timeline items */
+.timeline-item {
+  position: relative;
+}
+
+.timeline-item.left {
+  padding-right: 50px;
+  margin-left: 0;
+  margin-right: auto;
+  width: 47%;
+  text-align: right;
+}
+
+.timeline-item.right {
+  padding-left: 50px;
+  margin-left: auto;
+  margin-right: 0;
+  width: 47%;
+  text-align: left;
+}
+
+/* Timeline dots - dynamic positioning */
+.timeline-dot {
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: #1a1920;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Position the dot at the top of each entry */
+.timeline-entry .timeline-dot {
+  top: 25px;
+}
+
+/* First row dot */
+.timeline-row .timeline-dot {
+  top: 25px;
+}
+
+.timeline-dot-inner {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #7368db; /* Matching the purple from your styling */
+}
+
+/* Content styles */
+.timeline-content {
+  background-color: #1a1d29;
+  border-radius: 8px;
+  padding: 25px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 1;
+}
+
+.timeline-date {
+  display: inline-block;
+  background: linear-gradient(to right, #ff6b98, #7368db);
+  color: white;
+  padding: 6px 15px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+}
+
+.timeline-role {
+  font-size: 1.3rem;
+  margin-bottom: 5px;
+  color: #ff6b98;
+  background: linear-gradient(to right, #ff6b98, #9368db);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.timeline-company {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.timeline-description {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* Download button */
+.resume-download {
+  text-align: center;
+  margin-top: 60px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 30px;
+  background: linear-gradient(to right, #ff6b98, #7368db);
+  color: white;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background: linear-gradient(to right, #7368db, #3a97e4);
+  transform: translateY(-3px);
+  box-shadow: 0 7px 14px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .timeline-line {
+    left: 20px;
+    transform: none;
+  }
+  
+  .timeline-row {
+    flex-direction: column;
+  }
+  
+  .timeline-row .timeline-item,
+  .timeline-item.left,
+  .timeline-item.right {
+    width: 100%;
+    padding-left: 50px;
+    padding-right: 0;
+    margin-left: 0;
+    margin-right: 0;
+    text-align: left;
+  }
+  
+  .timeline-dot,
+  .timeline-row .timeline-dot,
+  .timeline-entry .timeline-dot {
+    left: 20px;
+    transform: none;
+  }
+}

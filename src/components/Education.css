@@ -1,0 +1,293 @@
+.education {
+  background-color: var(--bg-primary);
+  padding: 60px 0;
+  position: relative;
+}
+
+.title-container {
+  text-align: center;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.title-container:nth-of-type(2) {
+  text-align: center;
+  margin-top: 180px;
+  margin-bottom: 20px;
+}
+
+/* Main Title - matching section-header h2 in Skills.css */
+.main-title {
+  font-size: 2rem;
+  margin-bottom: 5px;
+  background: linear-gradient(to right, var(--gradient-start), var(--gradient-middle), var(--gradient-end));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+/* Title Underline - matching title-underline in Skills.css */
+.main-title::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(to right, #ff6b8b, #a873ff, #3cc8ff);
+  margin: 8px auto 10px;
+  border-radius: 2px;
+}
+
+/* Subtitle - matching section-subtitle in Skills.css */
+.subtitle {
+  font-size: 1.1rem;
+  color: #fff;
+  margin-bottom: 12px;
+  font-weight: 400;
+}
+
+/* Education Cards Layout */
+.education-cards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.education-card {
+  width: calc(33.33% - 20px);
+  background-color: var(--bg-card);
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.education-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #ff6b8b, #a09aff);
+}
+
+.education-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Date Label Styling - Subtle Pink */
+.date-tab {
+  text-align: center;
+  padding: 8px 15px;
+  margin: 0 auto 20px;
+  background-color: rgba(255, 107, 139, 0.15);
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.9rem;
+  border-radius: 20px;
+  width: 80%;
+  max-width: 250px;
+}
+
+/* Card Content Styling */
+.degree-title {
+  font-size: 1.4rem;
+  margin: 0 0 10px;
+  color: var(--text-primary);
+  text-align: center;
+}
+
+.institution {
+  font-size: 1.1rem;
+  margin: 0 0 15px;
+  color: var(--accent);
+  text-align: center;
+}
+
+.gpa-badge {
+  background-color: rgba(44, 44, 60, 0.7);
+  border-radius: 6px;
+  padding: 5px 15px;
+  display: inline-block;
+  margin: 0 auto 15px;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.gpa-value {
+  color: var(--accent);
+  font-weight: bold;
+}
+
+.description {
+  margin-bottom: 20px;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  text-align: center;
+}
+
+/* Courses Section */
+.courses-section {
+  text-align: left;
+  margin-top: auto;
+}
+
+.cisi-courses {
+  margin-top: 60px;
+}
+
+.courses-title {
+  font-size: 1rem;
+  margin: 0 0 10px;
+  color: var(--text-primary);
+}
+
+.courses-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.course-item {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 5px;
+  display: flex;
+  align-items: flex-start;
+}
+
+.bullet {
+  color: var(--accent);
+  margin-right: 8px;
+  display: inline-block;
+}
+
+/* Activities Layout */
+.activities-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin: 40px auto;
+  max-width: 1000px;
+}
+
+.activity-item {
+  width: calc(33.33% - 20px);
+  margin-bottom: 20px;
+}
+
+.activity-content {
+  background-color: var(--bg-card);
+  padding: 25px;
+  border-radius: 10px;
+  height: 100%;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  border-left: 4px solid var(--accent);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.activity-content:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.activity-content h3 {
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+  color: var(--text-primary);
+}
+
+.activity-content h4 {
+  font-size: 1rem;
+  margin-bottom: 12px;
+  color: var(--accent);
+}
+
+.activity-content p {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* Quote Section */
+.education-quote {
+  margin-top: 60px;
+  text-align: center;
+}
+
+.education-quote blockquote {
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 1.2rem;
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.9);
+  position: relative;
+  padding: 0 20px;
+}
+
+.education-quote blockquote::before,
+.education-quote blockquote::after {
+  content: '"';
+  font-size: 2.5rem;
+  color: var(--accent);
+  position: absolute;
+  opacity: 0.3;
+}
+
+.education-quote blockquote::before {
+  top: -20px;
+  left: 0;
+}
+
+.education-quote blockquote::after {
+  bottom: -40px;
+  right: 0;
+}
+
+.education-quote cite {
+  display: block;
+  margin-top: 15px;
+  font-size: 0.9rem;
+  font-style: normal;
+  color: var(--accent);
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .title-container {
+    text-align: center;
+    padding-right: 0;
+  }
+  
+  .main-title::after {
+    margin: 10px auto 0;
+  }
+  
+  .education-card {
+    width: calc(50% - 15px);
+  }
+  
+  .activity-item {
+    width: calc(50% - 15px);
+  }
+}
+
+@media (max-width: 768px) {
+  .education-cards {
+    flex-direction: column;
+  }
+  
+  .education-card,
+  .activity-item {
+    width: 100%;
+  }
+}

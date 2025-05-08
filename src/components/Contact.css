@@ -1,0 +1,126 @@
+#contact {
+  background-color: var(--bg-primary);
+  padding: 40px 0; /* Reduced from 80px */
+  min-height: auto; /* Let content determine height */
+}
+
+#contact .section-title {
+  text-align: center;
+  margin-bottom: 30px; /* Reduced from 60px */
+}
+
+#contact .section-title h2 {
+  font-size: 2rem; /* Reduced from 2.5rem */
+  color: var(--text-primary);
+  margin-bottom: 10px; /* Reduced from 15px */
+  background: linear-gradient(to right, var(--gradient-start), var(--gradient-middle));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#contact .subheading {
+  font-size: 1.1rem; /* Reduced from 1.3rem */
+  color: var(--text-secondary);
+  margin-top: 15px; /* Reduced from 25px */
+}
+
+#contact .contact-container {
+  display: flex;
+  justify-content: center;
+}
+
+#contact .contact-container.centered {
+  max-width: 500px; /* Reduced from 550px */
+  margin: 0 auto;
+}
+
+#contact .contact-info {
+  background-color: var(--bg-card);
+  padding: 30px 25px; /* Reduced from 45px 40px */
+  border-radius: 10px; /* Reduced from 12px */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  width: 100%;
+}
+
+/* Contact block structure */
+#contact .contact-block {
+  display: flex;
+  margin-bottom: 20px; /* Reduced from 30px */
+}
+
+#contact .left-column {
+  width: 60px; /* Reduced from 70px */
+  flex-shrink: 0;
+}
+
+#contact .right-column {
+  display: flex;
+  flex-direction: column;
+}
+
+#contact .contact-icon {
+  width: 45px; /* Reduced from 50px */
+  height: 45px; /* Reduced from 50px */
+  border-radius: 50%;
+  background: linear-gradient(to bottom right, var(--gradient-start), var(--gradient-middle));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#contact .contact-icon i {
+  color: white !important;
+  font-size: 1.1rem; /* Reduced from 1.3rem */
+}
+
+/* Heading and details with !important for specificity */
+#contact .contact-heading {
+  font-size: 1.1rem !important; /* Reduced from 1.3rem */
+  color: var(--text-primary) !important;
+  margin: 0 0 5px 0 !important; /* Reduced from 8px */
+  padding: 0 !important;
+  font-weight: 500 !important;
+  text-align: left !important;
+}
+
+#contact .contact-detail {
+  font-size: 0.95rem !important; /* Reduced from 1.1rem */
+  color: rgba(255, 255, 255, 0.8) !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  text-align: left !important;
+}
+
+/* LinkedIn button */
+#contact .linkedin-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px; /* Reduced from 25px */
+}
+
+#contact .linkedin-button {
+  width: 48px !important; /* Reduced from 55px */
+  height: 48px !important; /* Reduced from 55px */
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background: linear-gradient(to bottom right, var(--gradient-start), var(--gradient-middle)) !important;
+  border-radius: 6px !important; /* Reduced from 8px */
+  color: white !important;
+  font-size: 1.2rem !important; /* Reduced from 1.4rem */
+  transition: all 0.3s ease !important;
+  box-shadow: 0 0 12px rgba(255, 105, 180, 0.5) !important; /* Reduced glow */
+}
+
+#contact .linkedin-button:hover {
+  box-shadow: 0 0 20px rgba(255, 105, 180, 0.8) !important;
+  transform: translateY(-4px) !important; /* Reduced from -5px */
+}
+
+/* Media queries */
+@media (max-width: 768px) {
+  #contact .contact-container.centered {
+    max-width: 90%;
+  }
+}

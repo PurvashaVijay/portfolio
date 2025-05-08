@@ -1,0 +1,302 @@
+/* Revised Dark Navbar with Two-Tone Effects */
+:root {
+  --navbar-bg: #0a0e17; /* Background from the two-tone navbar */
+  --text-color: #ffffff;
+  --gradient-start: #ff69b4; /* Pink */
+  --gradient-middle: #9370db; /* Purple */
+  --accent: #ff69b4;
+  --navbar-border: rgba(255, 255, 255, 0.1);
+  --button-bg: rgba(255, 255, 255, 0.1);
+  --button-hover: rgba(255, 255, 255, 0.2);
+  --transition-speed: 0.3s;
+}
+
+/* Override any globals.css styles by using higher specificity */
+body .navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: all var(--transition-speed) ease;
+  padding: 10px 0 0 0; /* Reduced top padding */
+  background-color: var(--navbar-bg);
+  height: auto; /* Allow height to adjust naturally */
+}
+
+/* Scrolled state with border */
+body .navbar.scrolled {
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Two-tone bottom accent moved outside navbar-container */
+body .navbar-bottom {
+  background-color: rgba(255, 105, 180, 0.15);
+  height: 3px; /* Reduced height */
+  position: relative;
+  width: 100%;
+  margin-top: 10px; /* Reduced margin */
+  bottom: 0; /* Ensure it stays at the bottom of the navbar */
+}
+
+/* Scroll progress indicator */
+body .scroll-progress {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3px; /* Match parent height */
+  width: 0; /* Will be controlled by JS */
+  background: linear-gradient(to right, var(--gradient-start), var(--gradient-middle));
+  transition: width 0.1s ease;
+}
+
+body .navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 20px; /* Reduced padding */
+  max-width: 100%; /* Override any max-width from container class */
+  margin: 0; /* Remove any auto margins */
+  position: relative; /* Ensure proper positioning context */
+  z-index: 2; /* Higher than the progress bar */
+  box-sizing: border-box; /* Ensure padding is included in width calculation */
+  height: 50px; /* Reduced fixed height */
+}
+
+/* Left and right corner containers for absolute positioning */
+body .left-corner {
+  position: absolute;
+  left: 20px; /* Match container padding */
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 3;
+}
+
+body .right-corner {
+  position: absolute;
+  right: 20px; /* Match container padding */
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 3;
+}
+
+/* Logo styling - now absolutely positioned */
+body .logo {
+  font-size: 1.5rem; /* Reduced size */
+  font-weight: 700;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  margin: 0; /* Remove any margins */
+  padding: 0; /* Remove any padding */
+}
+
+/* Override any container styles from globals.css */
+body .navbar-container {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 50px; /* Reduced fixed height */
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Contact button - now absolutely positioned */
+body .contact-button {
+  background-color: var(--button-bg);
+  color: var(--text-color) !important; /* Override any link colors */
+  padding: 8px 18px; /* Reduced padding */
+  border-radius: 100px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  transition: all 0.2s ease;
+  border: 1px solid var(--navbar-border);
+  white-space: nowrap; /* Prevent text wrapping */
+  font-size: 0.85rem; /* Reduced font size */
+}
+
+/* Logo styling with gradient - now on the left */
+.logo {
+  font-size: 1.5rem; /* Reduced size */
+  font-weight: 700;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  order: 1; /* Ensure logo appears on the left */
+  margin-right: auto; /* Force logo to left side by pushing other elements away */
+}
+
+.logo-text {
+  background: linear-gradient(to right, var(--gradient-start), var(--gradient-middle));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+}
+
+/* Navigation menu centered */
+.nav-center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  order: 2; /* Ensure nav stays in the middle */
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 15px; /* Reduced gap */
+}
+
+.nav-links li {
+  position: relative;
+}
+
+.nav-links a {
+  color: var(--text-color);
+  text-decoration: none;
+  font-size: 0.9rem; /* Reduced font size */
+  transition: all 0.3s ease;
+  position: relative;
+  padding: 4px 0; /* Reduced padding */
+}
+
+.nav-links a:hover, 
+.nav-links a.active {
+  color: var(--accent);
+}
+
+/* Hover effect from two-tone navbar */
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -4px; /* Reduced distance */
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(to right, var(--gradient-start), var(--gradient-middle));
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after, 
+.nav-links a.active::after {
+  width: 100%;
+}
+
+/* Contact button now in rightmost corner */
+.right-section {
+  order: 3; /* Ensure contact button appears on the right */
+  margin-left: auto; /* Force contact to right side by pushing away from other elements */
+}
+
+.contact-button {
+  background-color: var(--button-bg);
+  color: var(--text-color);
+  padding: 8px 18px; /* Reduced padding */
+  border-radius: 100px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  transition: all 0.2s ease;
+  border: 1px solid var(--navbar-border);
+  font-size: 0.85rem; /* Reduced font size */
+}
+
+.contact-button:hover {
+  background-color: var(--button-hover);
+}
+
+.contact-button .icon {
+  margin-left: 6px; /* Reduced margin */
+  font-size: 0.9rem; /* Reduced size */
+}
+
+/* Mobile menu toggle */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--text-color);
+  font-size: 1.3rem; /* Reduced size */
+  cursor: pointer;
+  order: 4; /* Place after other elements */
+}
+
+/* Mobile styles */
+@media (max-width: 991px) {
+  /* Mobile menu toggle - now correctly positioned */
+  body .menu-toggle {
+    display: block;
+    background: none;
+    border: none;
+    color: var(--text-color);
+    font-size: 1.3rem; /* Reduced size */
+    cursor: pointer;
+    position: absolute;
+    right: 20px; /* Match container padding */
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 4; /* Above other elements */
+  }
+  
+  /* Hide right corner on mobile */
+  body .right-corner {
+    display: none;
+  }
+  
+  /* Keep logo visible on mobile */
+  body .left-corner {
+    position: relative;
+    left: 0;
+    transform: none;
+    margin-left: 20px; /* Reduced margin */
+  }
+  
+  body .nav-center {
+    position: fixed;
+    top: 50px; /* Match navbar height */
+    left: 0;
+    width: 100%;
+    background-color: var(--navbar-bg);
+    padding: 15px; /* Reduced padding */
+    transform: translateX(0);
+    display: none;
+    border-top: 1px solid var(--navbar-border);
+    border-bottom: 1px solid var(--navbar-border);
+    z-index: 10;
+  }
+  
+  body .nav-center.active {
+    display: block;
+  }
+  
+  body .nav-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px; /* Reduced gap */
+  }
+  
+  /* Add the contact button to the mobile menu when open */
+  body .nav-center.active::after {
+    content: "";
+    display: block;
+    margin: 15px auto 0; /* Reduced margin */
+    width: 80%;
+    height: 1px;
+    background-color: var(--navbar-border);
+  }
+  
+  body .right-corner.active {
+    display: flex;
+    position: static;
+    justify-content: center;
+    margin-top: 15px; /* Reduced margin */
+    transform: none;
+  }
+}
