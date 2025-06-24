@@ -76,7 +76,7 @@ const About: React.FC = () => {
 
             <motion.div variants={itemVariants} className="btn-container">
               <motion.a 
-                href="/Purvasha-Vijay-Anand-Resume.pdf" 
+                href="/portfolio/Purvasha-Vijay-Anand-Resume.pdf" 
                 className="btn"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}

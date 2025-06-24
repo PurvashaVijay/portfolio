@@ -77,7 +77,7 @@ const Home: React.FC = () => {
               Connect With Me
             </motion.a>
             <motion.a 
-              href="/Purvasha-Vijay-Anand-Resume.pdf" 
+              href="/portfolio/Purvasha-Vijay-Anand-Resume.pdf" 
               className="btn btn-secondary" 
               download
               whileHover={{ scale: 1.05 }}

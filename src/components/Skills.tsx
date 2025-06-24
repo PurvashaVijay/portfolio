@@ -23,6 +23,7 @@ const Skills: React.FC = () => {
       color: "#4361ee",
       items: [
         { name: "Python" },
+        { name: "SQL" },
         { name: "R" },
         { name: "SAS" }
       ]
@@ -81,7 +82,7 @@ const Skills: React.FC = () => {
       iconClass: "fa-solid fa-tools",
       color: "#f25c54",
       items: [
-        { name: "Zoho CRM" },
+        { name: "CRM" },
         { name: "Gen AI" },
         { name: "Git & GitHub" },
         { name: "Jupyter Notebooks" },

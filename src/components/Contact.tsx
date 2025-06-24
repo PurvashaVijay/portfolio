@@ -89,7 +89,7 @@ const Contact: React.FC = () => {
               </div>
               <div className="right-column">
                 <h3 className="contact-heading">Location</h3>
-                <p className="contact-detail">McLean, VA, USA</p>
+                <p className="contact-detail">Open to Relocation</p>
               </div>
             </div>
             

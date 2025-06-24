@@ -23,19 +23,19 @@ const Experience = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            Analyst Work Spanning Consulting, Education & Industry
+            Analyst Work Spanning Consulting, Finance & Tech
           </motion.p>
         </div>
         
         <div className="timeline">
           <div className="timeline-line"></div>
           
-          {/* First row - Jan 2025-Present, side by side */}
+          {/* First row - Jan 2025-June 2025, side by side */}
           <div className="timeline-row">
             <div className="timeline-item left">
               <div className="timeline-content">
-                <div className="timeline-date">Jan 2025–Present</div>
-                <h3 className="timeline-role">Technology and Analytics Intern</h3>
+                <div className="timeline-date">Jan 2025–May 2025</div>
+                <h3 className="timeline-role">Business Systems Analytics Intern</h3>
                 <h4 className="timeline-company">Lerner College, University of Delaware</h4>
                 <p className="timeline-description">
                   Developed predictive dashboards and a full-stack scheduling system, cutting course conflicts by 45% and saving 50+ staff hours. Used Qlik, Alteryx, Python (OR-Tools), Node.js, PostgreSQL, and React. Led Agile sprints with 100% on-time delivery.
@@ -49,7 +49,7 @@ const Experience = () => {
             
             <div className="timeline-item right">
               <div className="timeline-content">
-                <div className="timeline-date">Jan 2025–Present</div>
+                <div className="timeline-date">Jan 2025–May 2025</div>
                 <h3 className="timeline-role">Graduate Assistant</h3>
                 <h4 className="timeline-company">University of Delaware</h4>
                 <p className="timeline-description">
@@ -63,7 +63,7 @@ const Experience = () => {
             {/* Dec 2024-Jan 2025 */}
             <div className="timeline-item left">
               <div className="timeline-content">
-                <div className="timeline-date">Dec 2024–Jan 2025</div>
+                <div className="timeline-date">Nov 2024–Feb 2025</div>
                 <h3 className="timeline-role">Data Analyst Intern</h3>
                 <h4 className="timeline-company">Craftsman Automation, Coimbatore</h4>
                 <p className="timeline-description">
@@ -99,7 +99,7 @@ const Experience = () => {
             {/* Apr 2021-May 2021 */}
             <div className="timeline-item left">
               <div className="timeline-content">
-                <div className="timeline-date">Apr 2021–May 2021</div>
+                <div className="timeline-date">March 2021–June 2021</div>
                 <h3 className="timeline-role">Sales and Operations Analytics Intern</h3>
                 <h4 className="timeline-company">Aditya Birla Capital, Coimbatore</h4>
                 <p className="timeline-description">
@@ -115,7 +115,7 @@ const Experience = () => {
         </div>
         
         <div className="resume-download">
-          <a href="/Purvasha-Vijay-Anand-Resume.pdf" className="btn" download>
+          <a href="/portfolio/Purvasha-Vijay-Anand-Resume.pdf" className="btn" download>
             Download Full Resume
           </a>
         </div>
